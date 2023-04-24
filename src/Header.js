@@ -3,7 +3,7 @@ import './App.css';
 
 function Header() {
     return (
-        <h1>Code Challenge</h1>
+        <h1>Welcome To The Magic</h1>
     );
 }
 
