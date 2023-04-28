@@ -4,11 +4,27 @@ import Header from './Header.js';
 import Footer from './Footer.js';
 import HornedBeasts from './HornedBeasts';
 import Main from './Main'
+import { Modal } from 'react-bootstrap'
+import { useState } from 'react';
+import SelectedBeast from './selectedBeast';
+import Button from 'react-bootstrap/Button';
+
 
 function App() {
+  const [show, setShow] = useState(true);
+  const handleShow = () => setShow(true);
+  const [selectedBeast, setSelectedBeast] = useState({title: "beast", description:"This a description",image:"image_url" }) 
+
   return (
-    <div className="App">
+    <div style={{border: "5px solid red"}} className="App">
       <Header />
+      {/* <Modal show={show} onHide={function(){ setShow(false)}}>
+      Welcome to the Page.
+      </Modal> */}
+      {show === true ? <SelectedBeast selectedBeast={selectedBeast} setShow={setShow} /> : <></>}
+      {/* <Button variant="primary" onClick={handleShow}>
+        Press Here
+      </Button> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Welcome To 301</p>
@@ -25,7 +41,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <Main />
+      <Main setSelectedBeasts={setSelectedBeast} setShow={setShow} />
       <Footer />
     </div>
   );

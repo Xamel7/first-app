@@ -5,6 +5,8 @@
 import {useState} from 'react';
 import Card from "react-bootstrap/Card";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
+import SelectedBeast from './selectedBeast';
 
 
 function HornedBeasts(props) {
@@ -25,13 +27,20 @@ function HornedBeasts(props) {
   console.log('display state ', defaultDisplay)
  };
   return (
-    <Card style={{maxWidth:"30%", textAlign:"center", display:"inline-grid", objectFit:'contain', borderStyle:"solid"}}>
+    <Card style={{maxWidth:"30%", textAlign:"center", display:"inline-grid", objectFit:'contain', border:"5px solid purple"}}>
       <Card.Body>
       <Card.Title>{props.title}</Card.Title>
-      <Card.Img src={props.image} alt="beast" width={100}></Card.Img>
+      <Card.Img onClick={function(){
+        props.setShow(true)
+        props.setSelectedBeasts({title:props.title, description:props.description, image:props.image})
+      }} src={props.image} alt="beast" width={100}></Card.Img>
       <Card.Text>{props.description}</Card.Text>
       <Card.Text onClick={handleClick} className="text-dark" style = {{color:'black' }}>{ isFavorited===true ? "❤️" : "🖤"}{timesClicked}</Card.Text>
       </Card.Body>
+      <Button onClick={function() {
+      props.setShow(true)
+      }}>Click Here</Button>
+
     </Card>
     );
 }
