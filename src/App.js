@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 
 
 function App() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const [selectedBeast, setSelectedBeast] = useState({title: "beast", description:"This a description",image:"image_url" }) 
 

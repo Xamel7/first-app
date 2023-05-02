@@ -39,7 +39,7 @@ function HornedBeasts(props) {
       </Card.Body>
       <Button onClick={function() {
       props.setShow(true)
-      }}>Click Here</Button>
+      }}>Click</Button>
 
     </Card>
     );
