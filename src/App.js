@@ -16,7 +16,7 @@ function App() {
   const [selectedBeast, setSelectedBeast] = useState({title: "beast", description:"This a description",image:"image_url" }) 
 
   return (
-    <div style={{border: "5px solid red"}} className="App">
+    <div className="App">
       <Header />
       {/* <Modal show={show} onHide={function(){ setShow(false)}}>
       Welcome to the Page.

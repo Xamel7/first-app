@@ -13,7 +13,7 @@ function SelectedBeast(props) {
 
 
   return (
-    <div style={{border: "5px solid yellow"}}>
+    <div>
    
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

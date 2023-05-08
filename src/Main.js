@@ -28,7 +28,7 @@ function Main(props) {
     setChoice(event.target.value)
   }
   return (
-    <div className='container' style={{ border: "5px solid green", width: "100%", alignItems: "center" }}>
+    <div className='container' style={{ width: "100%", alignItems: "center" }}>
       <Form.Select onChange={selector} aria-label="Beast Horns">
         <option value="">Open this select menu</option>
         <option value="1">One</option>

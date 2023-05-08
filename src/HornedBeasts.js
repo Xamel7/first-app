@@ -27,7 +27,7 @@ function HornedBeasts(props) {
   console.log('display state ', defaultDisplay)
  };
   return (
-    <Card style={{maxWidth:"30%", textAlign:"center", display:"inline-grid", objectFit:'contain', border:"5px solid purple"}}>
+    <Card style={{maxWidth:"30%", textAlign:"center", display:"inline-grid", objectFit:'contain'}}>
       <Card.Body>
       <Card.Title>{props.title}</Card.Title>
       <Card.Img onClick={function(){
